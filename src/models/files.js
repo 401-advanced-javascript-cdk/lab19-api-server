@@ -1,13 +1,10 @@
 'use strict';
 
-const uuid = require('uuid/v4');
-
 const schema = require('./schemas/files-schema.js');
 
 class Files {
 
   constructor() {
-    this.database = [];
   }
 
   get(_id) {
@@ -31,9 +28,6 @@ class Files {
   delete(_id) {
     let query = {_id};
     return schema.remove(query);
-  }
-
-  sanitize(entry) {
   }
 
 }
